@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 5: Nâng cao</h1>
+<script>
+    let n = prompt("Nhập số lượng phần tử của mảng:");
+    n = Number(n);
+    if (isNaN(n) || n <= 0) {console.log("Vui lòng nhập một số nguyên dương hợp lệ.");}
+    else {let mang = [];for (let i = 0; i < n; i++) {let so = prompt("Nhập phần tử thứ " + (i + 1) + ":");so = Number(so);mang.push(so);}
+        function isPrime(num) {if (num < 2) return false;for (let i = 2; i <= Math.sqrt(num); i++) {if (num % i === 0) {
+            return false;}}
+            return true;}
+        let soNguyenTo = [];
+        let tongNguyenTo = 0;
+        for (let i = 0; i < mang.length; i++) {if (isPrime(mang[i])) {
+                soNguyenTo.push(mang[i]);
+                tongNguyenTo += mang[i];}}
+        console.log("Mảng đã nhập:", mang);
+        console.log("Các số nguyên tố trong mảng:", soNguyenTo);
+        console.log("Tổng các số nguyên tố:", tongNguyenTo);
+        if (soNguyenTo.length === 0) {console.log("Không có số nguyên tố nào trong mảng.");}}
+</script>
+</body>
+</html>
