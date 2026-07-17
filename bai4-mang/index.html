@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Mảng</title>
+</head>
+<body>
+<h1>Bài 4: Mảng</h1>
+<script>
+    let diemLop = [7, 9, 4, 8, 6, 10, 3, 5];
+    let soLuong = diemLop.length;
+    console.log("Số lượng học viên: " + soLuong);
+    let tongDiem = 0;
+    for (let i = 0; i < diemLop.length; i++) {
+        tongDiem += diemLop[i];
+    }
+    console.log("Tổng điểm của lớp: " + tongDiem)
+    let diemTrungBinh = tongDiem / diemLop.length;
+    console.log("Điểm trung bình của lớp: " + diemTrungBinh);
+    let diemCaoNhat = diemLop[0];
+    let diemThapNhat = diemLop[0];
+    for (let i = 1; i < diemLop.length; i++) {if (diemLop[i] > diemCaoNhat) {diemCaoNhat = diemLop[i];}if (diemLop[i] < diemThapNhat) {diemThapNhat = diemLop[i];}}
+    console.log("Điểm cao nhất: " + diemCaoNhat);
+    console.log("Điểm thấp nhất: " + diemThapNhat);
+    let soHocVienDat = 0;
+    for (let i = 0; i < diemLop.length; i++) {if (diemLop[i] >= 5) {soHocVienDat++;}}
+    console.log("Số học viên đạt (điểm >= 5): " + soHocVienDat);
+    console.log("Danh sách điểm của lớp: " + diemLop);
+</script>
+</body>
+</html>
